@@ -5,4 +5,5 @@ WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 COPY . /app/
-CMD bash
+WORKDIR /app/dtc0002
+CMD python manage.py runserver 0.0.0.0:8000
