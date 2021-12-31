@@ -6,10 +6,13 @@ Django to K8s.
 To run locally, modify `example.env` as needed and rename it to `.env`. Then run
 `docker-compose up`.
 
-To build and push to Docker hub, use the following:
+To build and push to Docker hub, use the following (substituting "textninja" for
+your own docker id):
 
 ```console
+$ docker login
 $ docker build -t textninja/hellodjango .
+$ docker push textninja/hellodjango
 ```
 
 To deploy to kubernetes (instructions forthcoming).
