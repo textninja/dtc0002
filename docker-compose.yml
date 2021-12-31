@@ -3,11 +3,16 @@ services:
   hellodjango:
     build: ./hellodjango
     environment:
+      - SECRET_KEY
+      - DEBUG
       - POSTGRES_USER
       - POSTGRES_DB
       - POSTGRES_PASSWORD
+      - POSTGRES_HOST=postgres
     ports:
       - 127.0.0.1:8000:8000
+    depends_on:
+      - postgres
     restart: always
   postgres:
     image: postgres:14
