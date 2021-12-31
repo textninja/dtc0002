@@ -1,7 +1,8 @@
 # dtc0002
 
-This is a continuation of yesterday's challenge, which is to deploy
-Django to K8s.
+This is a continuation of yesterday's challenge, which was to deploy Django to
+K8s. I'm starting with a dockerized version of Django. Now I need to write the
+Kubernetes resource files.
 
 To run locally, modify `example.env` as needed and rename it to `.env`. Then run
 `docker-compose up`.
