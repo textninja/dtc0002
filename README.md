@@ -4,8 +4,14 @@ This is a continuation of yesterday's challenge, which was to deploy Django to
 K8s. I'm starting with a dockerized version of Django. Now I need to write the
 Kubernetes resource files.
 
-To run locally, modify `example.env` as needed and rename it to `.env`. Then run
-`docker-compose up`.
+To run locally, copy `example.env` to `.env` and make any changes you deem
+necessary. Next, run `docker-compose up`. You should have your very own Django
+running on http://127.0.0.1:8000.
+
+## Kubernetes prerequisites
+
+In order to deploy to Kubernetes, I need to store my image in a Docker registry
+somewhere.
 
 To build and push to Docker hub, use the following (substituting "textninja" for
 your own docker id):
