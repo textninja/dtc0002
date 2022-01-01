@@ -81,7 +81,7 @@ if getenv("POSTGRES_HOST"):
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': getenv("POSTGRES_DB"),
             'USER': getenv("POSTGRES_USER"),
-            'PASSWORD': getenv("POSTGRES_HOST"),
+            'PASSWORD': getenv("POSTGRES_PASSWORD"),
             'HOST': getenv("POSTGRES_HOST"),
             'PORT': getenv("POSTGRES_PORT", '5432'),
         }
