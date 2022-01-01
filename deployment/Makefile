@@ -1,3 +1,5 @@
+.phony: clean
+
 clean:
 	rm -rf venv
 
@@ -13,3 +15,4 @@ deployment.dev: venv
 		source ./venv/bin/activate; \
 		python ./_scripts/deploy-dev.py \
 	)
+
