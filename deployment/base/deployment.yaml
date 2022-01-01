@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellodjango-deployment
+  labels:
+    app: hellodjango
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellodjango
+  template:
+    metadata:
+      labels:
+        app: hellodjango
+    spec:
+      containers:
+        - name: hellodjango
+          image: textninja/hellodjango:latest
+          ports:
+            - containerPort: 8000

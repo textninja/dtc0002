@@ -1,0 +1,5 @@
+bases:
+ - ../base
+namespace: dtc0002-dev
+resources:
+  - namespace.yaml
