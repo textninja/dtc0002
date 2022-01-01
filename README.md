@@ -24,7 +24,7 @@ $ docker push textninja/hellodjango
 
 ## Deploying to Kubernetes
 
-Instructions forthcoming.
+To deploy to Kubernetes, follow the instructions in the [deployment](deployment) folder.
 
 ## Project notes
 
