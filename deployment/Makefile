@@ -1,4 +1,4 @@
-.PHONY: clean deployment.dev
+.PHONY: clean k8s/dev.yml deployment.dev
 
 clean:
 	rm -rf venv k8s
@@ -11,6 +11,7 @@ venv:
 	)
 
 deployment.dev: k8s/dev.yml
+	kubectl apply -f k8s/dev.yml
 
 k8s/dev.yml: venv
 	mkdir -p k8s
