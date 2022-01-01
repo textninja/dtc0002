@@ -11,8 +11,8 @@ running on http://127.0.0.1:8000.
 ## Kubernetes prerequisites
 
 In order to deploy to Kubernetes, I need to store my image in a Docker registry
-somewhere. I chose [Docker
-Hub](https://hub.docker.com/repository/docker/textninja/hellodjango).
+somewhere. I chose [a Docker
+Hub repo](https://hub.docker.com/repository/docker/textninja/hellodjango).
 
 To build and push to Docker hub, I ran the following commands.
 
