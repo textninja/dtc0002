@@ -7,3 +7,4 @@ $ make deployment.dev
 $ make deployment.test
 $ make deployment.prod
 ```
+A namespace called dtc0002-`env` will be created automatically.

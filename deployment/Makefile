@@ -1,4 +1,4 @@
-.PHONY: clean k8s/dev.yml deployment.dev
+.PHONY: secret.dev clean k8s/dev.yml deployment.dev
 
 clean:
 	rm -rf venv k8s
@@ -19,3 +19,9 @@ k8s/dev.yml: venv
 		source ./venv/bin/activate; \
 		python ./_scripts/deploy-dev.py > k8s/dev.yml \
 	)
+
+secret.dev:
+	kubeseal \
+      --controller-name=my-release-sealed-secrets \
+      --controller-namespace=dtc0002-dev \
+      --format yaml

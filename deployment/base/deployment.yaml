@@ -18,6 +18,11 @@ spec:
         - name: hellodjango
           image: textninja/hellodjango:latest
           env:
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: django-secrets
+                  key: secretkey
             - name: POSTGRES_HOST
               value: postgres
             - name: POSTGRES_DB
